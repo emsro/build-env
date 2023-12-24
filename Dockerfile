@@ -9,8 +9,3 @@ RUN pacman -Sy gtest protobuf boost nlohmann-json --noconfirm
 # Instal other tools
 RUN pacman -Sy git clang --noconfirm
 
-WORKDIR /servio
-
-COPY . .
-
-RUN make
