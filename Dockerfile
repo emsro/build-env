@@ -1,7 +1,7 @@
 FROM archlinux:latest
 
 # Instal build tools
-RUN pacman -Sy make cmake ninja gcc arm-none-eabi-gcc --noconfirm
+RUN pacman -Sy make cmake ccache ninja gcc arm-none-eabi-gcc --noconfirm
 
 # Instal dependencies
 RUN pacman -Sy gtest protobuf boost nlohmann-json --noconfirm
