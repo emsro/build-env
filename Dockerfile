@@ -1,11 +1,17 @@
 FROM archlinux:latest
 
-# Instal build tools
-RUN pacman -Sy make cmake ccache ninja gcc arm-none-eabi-gcc --noconfirm
+# Install base
+RUN pacman -Sy python git --noconfirm
 
-# Instal dependencies
-RUN pacman -Sy gtest protobuf boost nlohmann-json --noconfirm
+# Install build tools
+RUN pacman -Sy make cmake ccache ninja --noconfirm
 
-# Instal other tools
-RUN pacman -Sy git clang --noconfirm
+# Install compilers
+RUN pacman -Sy gcc arm-none-eabi-gcc arm-none-eabi-newlib clang --noconfirm
+
+# Install protobuf
+RUN pacman -Sy protobuf python-protobuf python-setuptools --noconfirm
+
+# Install other dependencies
+RUN pacman -Sy gtest  boost nlohmann-json --noconfirm
 
