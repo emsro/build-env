@@ -1,7 +1,7 @@
 FROM archlinux:latest
 
 # Install base
-RUN pacman -Sy python git openocd openssh --noconfirm
+RUN pacman -Sy python git openocd openssh rsync --noconfirm
 
 # Install build tools
 RUN pacman -Sy make cmake ccache ninja --noconfirm
