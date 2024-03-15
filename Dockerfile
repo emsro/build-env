@@ -13,7 +13,7 @@ RUN apk add --no-cache gcc gcc-arm-none-eabi clang
 RUN apk add --no-cache protobuf
 
 # Install other dependencies
-RUN apk add --no-cache gtest boost nlohmann-json 
+RUN apk add --no-cache gtest gtest-dev boost nlohmann-json 
 
 # Install packages for CI only
 RUN apk add --no-cache openssh rsync 
