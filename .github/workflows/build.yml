@@ -16,6 +16,6 @@ jobs:
               password: ${{secrets.GITHUB_TOKEN}}
 
           - run: |
-              docker buildx builkd --tag ghcr.io/emsro/build-env:latest --platform linux/amd64,linux/arm64 .
+              docker buildx build --tag ghcr.io/emsro/build-env:latest --platform linux/amd64,linux/arm64 .
               docker push ghcr.io/emsro/build-env:latest
 
