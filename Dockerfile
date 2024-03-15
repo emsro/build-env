@@ -1,20 +1,20 @@
-FROM archlinux:latest
+FROM alpine:latest
 
 # Install base
-RUN pacman -Sy python git openocd --noconfirm
+RUN apk add --no-cache python3 git openocd 
 
 # Install build tools
-RUN pacman -Sy make cmake ccache ninja --noconfirm
+RUN apk add --no-cache make cmake ccache ninja 
 
 # Install compilers
-RUN pacman -Sy gcc arm-none-eabi-gcc arm-none-eabi-newlib clang --noconfirm
+RUN apk add --no-cache gcc gcc-arm-none-eabi clang 
 
 # Install protobuf
-RUN pacman -Sy protobuf python-protobuf python-setuptools --noconfirm
+RUN apk add --no-cache protobuf
 
 # Install other dependencies
-RUN pacman -Sy gtest boost nlohmann-json --noconfirm
+RUN apk add --no-cache gtest boost nlohmann-json 
 
 # Install packages for CI only
-RUN pacman -Sy openssh rsync --noconfirm
+RUN apk add --no-cache openssh rsync 
 
