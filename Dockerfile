@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # Install base
-RUN apk add --no-cache python3 git openocd 
+RUN apk add --no-cache python3 git openocd bash
 
 # Install build tools
 RUN apk add --no-cache make cmake ccache ninja 
