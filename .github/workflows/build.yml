@@ -24,4 +24,4 @@ jobs:
           
           - run: |
               docker buildx build --push --tag ghcr.io/emsro/testjig-env:latest --platform linux/amd64 .
-            working-direcotry: testjig/
+            working-directory: testjig/
