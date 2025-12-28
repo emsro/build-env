@@ -7,7 +7,7 @@ RUN apk add --no-cache python3 git bash
 RUN apk add --no-cache make cmake ccache ninja 
 
 # Install compilers
-RUN apk add --no-cache gcc g++ gcc-arm-none-eabi g++-arm-none-eabi clang clang-format
+RUN apk add --no-cache gcc g++ gcc-arm-none-eabi g++-arm-none-eabi clang
 
 # Install protobuf
 RUN apk add --no-cache protobuf protobuf-dev py3-protobuf py3-grpcio py3-setuptools
