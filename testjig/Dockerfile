@@ -10,7 +10,7 @@ RUN git clone https://github.com/STMicroelectronics/OpenOCD/
 WORKDIR OpenOCD
 
 RUN ./bootstrap
-RUN ./configure
+RUN ./configure --disable-werror
 RUN make
 RUN make install
 
